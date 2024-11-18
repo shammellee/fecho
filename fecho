@@ -17,11 +17,11 @@ do
   then
     shift
     continue
-  elif [[ -f "$1" ]]
+  fi
+
+  if [[ -f "$1" ]]
   then
     echo -e "$message" >> "$1"
-  else
-    echo -e "$message" > "$1"
   fi
 
   shift
